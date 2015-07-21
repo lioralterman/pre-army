@@ -77,6 +77,8 @@ list * createList() {
 	list * newList = (list *)malloc(sizeof(list));
 	newList->numItems = 0;
 	newList->sum = 0;
+	newList->first = NULL;
+	newList->last = NULL;
 	return newList;
 }
 
@@ -96,10 +98,12 @@ void deleteList(list * l) {
 }
 
 void addItem(list * l, int num) {
-	
+
 	/* Create item */
 	item * newItem = (item *)malloc(sizeof(item));
 	newItem->val = num;
+	newItem->next = NULL;
+	newItem->prev = NULL;
 
 	/* Change items pointers */
 	if (l->numItems > 0) {

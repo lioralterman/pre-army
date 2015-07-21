@@ -53,7 +53,10 @@ int main(int argc, char * argv[]) {
 	item * almostLastItem = getPrevItem(getLastItem(myList));
 	printf("almost last item: %d\n", getItemVal(almostLastItem));
 
-	/* stop the program from exsiting */
+	/* delete list */
+	deleteList(myList);
+
+	/* stop the program from exiting */
 	char c = getchar();
 }
 
